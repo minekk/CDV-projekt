@@ -1,0 +1,33 @@
+<mat-progress-spinner
+*ngIf="isLoaded===true"
+class="example-margin"
+color="accent"
+mode="indeterminate"
+>
+</mat-progress-spinner>
+<div *ngIf="message!==null" class="row weather">
+  
+  <div class="col-sm-6 col-md-6 icon">
+    <figure>
+    <img src="../../../../assets/weatherIcons/{{message?.weather[0].icon}}.svg" alt="" srcset="">
+    
+  </figure>
+</div>
+  
+  <div class="col-sm-6 col-md-6 details">
+  <h1> <b>{{message?.name}}</b> </h1>
+  <h4>{{(message?.dt | addZero) | getDayOfWeek}}</h4>
+  <h6><b>{{message?.dt | addZero | date:'dd-MM-yyyy HH:mm'}}</b></h6>
+
+  <p>{{message?.sys.country}}</p>
+  <!-- <p><b>{{message?.dt | addZero | date:'dd-MM-yyyy HH:mm'}}</b></p>
+  <p><b>{{(message?.dt | addZero) | getDayOfWeek}}</b></p> -->
+  <p>Temperatura: <b>{{message?.main.temp | kelwinToC}} °C</b></p>
+
+  
+  <p>Ciśnienie: <b>{{message?.main.pressure}} hPa</b></p>
+  <p>Wilgotność: <b>{{message?.main.humidity}} %</b></p>
+  <p>Prędkość wiatru: <b>{{message?.wind.speed}} km/h</b></p>
+
+</div>
+</div>

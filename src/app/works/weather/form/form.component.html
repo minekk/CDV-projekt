@@ -1,0 +1,18 @@
+<div class="center">
+<mat-form-field class="example-full-width">
+    <input 
+      matInput
+      type="text" 
+      placeholder="Lokalizacja"
+      (keyup.enter)="check(value)"
+      [(ngModel)]="value">
+    </mat-form-field>
+    
+    <button mat-button (click)="check(value)">Sprawdź pogodę</button>
+    
+     <span 
+      [innerHTML]="error"
+      class="error"
+      ></span>
+
+    </div>

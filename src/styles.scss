@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    background-image: url('./assets/background2-scaled.jpg');   //Photo by LSD for Society on Unsplash
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    background-attachment: fixed;
+}
+.mat-form-field-empty.mat-form-field-label {
+    color:#fff;
+}
+.mat-focused .mat-form-field-label {
+color: #fff !important;
+
+}
+.mat-form-field-ripple {
+background-color: #fff !important;
+}
+.mat-form-field {
+border-bottom-color: #fff !important;
+}
+.mat-input-element { 
+  caret-color: #fff;
+}
+.mat-form-field-underline {
+  background-color: #fff !important;
+}
+.mat-form-field.float-label {
+  color:#fff !important;
+}

@@ -1,0 +1,27 @@
+.form {
+  width:500px;
+  height:200px;
+}
+.form > * {
+  width: 100%;
+}
+.form textarea {
+  height: 100px;
+}
+input {
+  color:#fff;
+}
+button {
+  outline:none;
+  border:1px solid #fff;
+
+}
+.warn {
+  color:#b10000;
+  font-weight: 700;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+
+}

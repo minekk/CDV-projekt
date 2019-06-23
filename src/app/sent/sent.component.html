@@ -1,0 +1,32 @@
+
+
+
+<div class="form center h">
+<h2 class="center">Twoja wiadomość została wysłana!</h2>
+<mat-form-field class="example-full-width" color="red">
+<input 
+  matInput
+  type="text"
+  [value]="name"
+  [readonly]="true"
+  
+  >
+</mat-form-field>
+ 
+  <mat-form-field> 
+    <textarea matInput 
+    [value]="yourMessage"
+    [readonly]="true"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input 
+    matInput 
+    [readonly]="true"
+    [value]="contact"
+    >
+  
+  </mat-form-field>
+  <button mat-button (click)="back()">Powrót</button>
+
+</div>

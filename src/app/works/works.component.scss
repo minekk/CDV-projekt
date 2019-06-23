@@ -1,0 +1,10 @@
+ul li{
+    outline:none;
+  }
+  
+  ul li:hover {
+    cursor:pointer;
+  }
+.disabled {
+    cursor: default !important;
+}

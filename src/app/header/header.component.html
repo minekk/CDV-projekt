@@ -1,0 +1,36 @@
+<div style="height:40px; background: transparent;"></div>
+
+<mdb-navbar SideClass="navbar navbar-center navbar-expand-md navbar-dark indigo">
+    <mdb-navbar-brand><a class="navbar-brand brand" href="">
+        Portfolio CDV
+        </a></mdb-navbar-brand>
+  <links>
+
+        <!-- <button 
+        class="navbar-toggler" 
+        type="button" 
+        (click)="toggleNavbar()">
+          
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse show"
+        [ngClass]="{ 'show': navbarOpen }" > -->
+
+
+  <ul class="navbar-nav mr-auto">
+    <li 
+    *ngFor="let item of header"
+    routerLink="{{item.link}}"
+    routerLinkActive="active disabled"
+    class="nav-item nav-link d-inline-block"
+    > {{item.name}}
+    </li>
+  </ul>
+
+
+  
+</links>
+</mdb-navbar>
+
+

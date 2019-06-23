@@ -1,0 +1,33 @@
+
+<div class="form center">
+    <mat-form-field class="example-full-width" color="red">
+    <input 
+      matInput
+      type="text" 
+      placeholder="Podaj imię"
+      [(ngModel)]="name"
+      
+      >
+    </mat-form-field>
+     
+      <mat-form-field> 
+        <textarea matInput 
+        placeholder="Twoja wiadomość"
+        [(ngModel)]="yourMessage"></textarea>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <input 
+        matInput 
+        placeholder="Podaj kontakt" 
+        required
+        [(ngModel)]="contact"
+        >
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <button mat-button (click)="send(name,yourMessage, contact)">Wyślij</button>
+    
+    <span class="warn"
+    [innerHTML]="warn"
+    ><b>Wszystkie pola muszą być wypełnione!</b></span>
+    </div>

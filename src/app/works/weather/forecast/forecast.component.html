@@ -1,0 +1,29 @@
+<div *ngIf="message!==null">
+        <drag-scroll>
+        <div *ngFor="let item of message.list" drag-scroll-item> 
+          <div class="item">
+            <div>
+                <h2><b>{{item.dt | addZero | date:'HH:mm'}}</b></h2>
+                <h3><b>{{(item.dt | addZero) | getDayOfWeek}}</b></h3>
+                <p><b>{{item.dt | addZero | date:'dd.MM.yyyy'}}</b></p>
+                <p>Temperatura - <b>{{item.main.temp | kelwinToC}} °C</b></p>
+                <p>Wilgotność - <b>{{item.main.humidity}} %</b></p>
+                <p>Ciśnienie - <b>{{item.main.pressure}} hPa</b></p>
+                
+    
+    
+                
+                
+    
+            </div>
+            
+            <div class="icon">
+                    <figure>
+                            <img src="../../../../assets/weatherIcons/{{item?.weather[0].icon}}.svg" alt="Brak obsługi SVG" srcset="">
+                    </figure>
+            </div>
+      </div>
+        </div>
+        </drag-scroll>
+    
+      </div>
